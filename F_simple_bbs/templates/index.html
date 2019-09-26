@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>bbs</h1>
+
+<form action="{{ url_for('post_message') }}" method="post">
+    Username: <input name="username" type="text"><br>
+    Message: <input name="message" type="text"><br>
+    <input type="submit">
+</form>
+
+<hr>
+
+{% for message in messages %}
+<li>{{ message }}</li>
+<hr>
+{% endfor %}
+
+</body>
+</html>
